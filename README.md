@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# 🌍 World Bank Data Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**World Bank Data Visualizer** — bu dastur World Bank API-dan mamlakatlar va statistik ko‘rsatkichlar bo‘yicha ma’lumotlarni olib, ularni interaktiv va chiroyli grafiklar orqali vizualizatsiya qiladi. 
 
-Currently, two official plugins are available:
+Foydalanuvchilar mamlakat va ko‘rsatkich tanlab, 2000-2020 yillar oralig‘idagi ma’lumotlarni quyidagi grafik kutubxonalar yordamida ko‘rishlari mumkin:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Recharts
+- Chart.js
+- ECharts
+- Nivo
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## ⚙️ Texnologiyalar
 
-- Configure the top-level `parserOptions` property like this:
+- **React & TypeScript** – frontend tuzilmasi uchun
+- **Redux Toolkit Query** – API so‘rovlarini boshqarish
+- **Recharts** – oddiy va moslashuvchan chiziqli grafiklar
+- **Chart.js** va `react-chartjs-2` – interaktiv grafiklar
+- **ECharts** – kuchli va murakkab vizualizatsiyalar
+- **Nivo** – zamonaviy, reaktiv grafik kutubxonasi
+- **Tailwind CSS** – zamonaviy, stil va UI dizayn uchun
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🔍 Xususiyatlar
+
+- **Mamlakat tanlash** – istalgan mamlakatni ro‘yxatdan tanlash
+- **Ko‘rsatkich tanlash** – masalan, GDP, aholisi va boshqa ko‘rsatkichlar
+- **Bir nechta grafik kutubxonalar orqali vizualizatsiya**
+- **Tablar orqali grafiklar o‘rtasida almashish**
+- **Chiroyli UI dizayn** – gradientlar, Inter font, silliq chiziqlar
+
+---
+
+## 🚀 O‘rnatish
+
 ```
+# Repozitoriyani klonlash
+git clone https://github.com/Mansurxan1/CRM-api.worldbank.org.git
+cd CRM-api.worldbank.org
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# Bog‘liqliklarni o‘rnatish
+npm install
+Yoki aniq bog‘liqliklarni o‘rnatish:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+npm install @reduxjs/toolkit react-redux recharts chart.js react-chartjs-2 echarts @nivo/core @nivo/line
+Ishga tushirish:
+npm run dev
+Brauzerda oching: http://localhost:5173
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+🧪 Loyihani ishlatish
+Mamlakat tanlang: Masalan, Uzbekistan
+
+Ko‘rsatkich tanlang: Masalan, GDP (current US$)
+
+Grafikni ko‘ring: Tanlangan ma’lumotlar to‘rtta kutubxona grafiklarida chiqadi
+
+Tablar orqali grafikni almashtiring
+
+🌐 API haqida
+Manba: World Bank API
+
+Ko‘rsatkichlar oraliq: 2000 - 2020 yillar
+
+📘 Eslatmalar
+Barcha komponentlar TypeScript yordamida yozilgan
+
+Kutilmagan xatoliklardan himoya mavjud
+
+Grafiklar ekranning 80% kengligini (80vw) egallaydi
+
+📄 Litsenziya
+Ushbu loyiha ochiq manbali bo‘lib, istalgan foydalanuvchi foydalanishi mumkin.
+
+👨‍💻 Muallif: Mansurxon
