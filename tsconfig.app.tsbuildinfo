@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/countryselector.tsx","./src/components/datachart.tsx","./src/components/indicatorselector.tsx","./src/notfound/notfound.tsx","./src/store/index.ts","./src/store/features/api/worldbankapi.ts"],"version":"5.8.3"}
