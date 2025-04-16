@@ -17,7 +17,7 @@ import * as echarts from "echarts";
 import { EChartsOption } from "echarts";
 import { Line as NivoLine } from "@nivo/line";
 
-// Chart.js
+// Chart.js ni ro‘yxatdan o‘tkazish
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, ChartJSTooltip, ChartJSLegend, Filler);
 
 interface DataChartProps {
@@ -52,7 +52,7 @@ const DataChart = ({ countryCode, indicatorCode }: DataChartProps) => {
         yAxis: {
           type: "value",
           axisLabel: {
-            formatter: (value: number) => `${(value / 1000000).toFixed(1)}M`,
+            formatter: (value: number) => (value >= 1000000 ? `${(value / 1000000).toFixed(1)}M` : value.toLocaleString()),
             fontSize: 12,
             color: "#555",
             fontFamily: "Inter",
@@ -111,7 +111,7 @@ const DataChart = ({ countryCode, indicatorCode }: DataChartProps) => {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: { position: "top" as const, labels: { font: { size: 14, family: "Inter" }, color: "#333" } }, // position aniq belgilandi
+      legend: { position: "top" as const, labels: { font: { size: 14, family: "Inter" }, color: "#333" } },
       title: { display: true, text: "Statistika (2000-2020)", font: { size: 18, family: "Inter" }, color: "#333" },
       tooltip: { backgroundColor: "#fff", titleColor: "#333", bodyColor: "#666", borderColor: "#ddd", borderWidth: 1 },
     },
@@ -121,8 +121,10 @@ const DataChart = ({ countryCode, indicatorCode }: DataChartProps) => {
         ticks: {
           font: { size: 12, family: "Inter" },
           color: "#555",
-          callback: (tickValue: string | number) =>
-            typeof tickValue === "number" ? `${(tickValue / 1000000).toFixed(1)}M` : tickValue,
+          callback: (tickValue: string | number) => {
+            const value = typeof tickValue === "number" ? tickValue : parseFloat(tickValue);
+            return value >= 1000000 ? `${(value / 1000000).toFixed(1)}M` : value.toLocaleString();
+          },
         },
         grid: { color: "rgba(0, 0, 0, 0.05)" },
       },
@@ -189,7 +191,7 @@ const DataChart = ({ countryCode, indicatorCode }: DataChartProps) => {
               legend: "Qiymat",
               legendOffset: -80,
               legendPosition: "middle",
-              format: (value: number) => `${(value / 1000000).toFixed(1)}M`,
+              format: (value: number) => (value >= 1000000 ? `${(value / 1000000).toFixed(1)}M` : value.toLocaleString()),
               tickValues: 6,
             }}
             colors={["#6b48ff"]}
@@ -230,7 +232,7 @@ const DataChart = ({ countryCode, indicatorCode }: DataChartProps) => {
                 label={{ value: "Yil", position: "insideBottom", offset: -10, fontFamily: "Inter", fontSize: 14, fill: "#333" }}
               />
               <YAxis
-                tickFormatter={(value: number) => `${(value / 1000000).toFixed(1)}M`}
+                tickFormatter={(value: number) => (value >= 1000000 ? `${(value / 1000000).toFixed(1)}M` : value.toLocaleString())}
                 tick={{ fontFamily: "Inter", fontSize: 12, fill: "#555" }}
                 label={{ value: "Qiymat", angle: -90, position: "insideLeft", fontFamily: "Inter", fontSize: 14, fill: "#333" }}
               />
