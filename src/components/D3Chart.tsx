@@ -4,7 +4,7 @@ import * as d3 from "d3";
 interface D3ChartProps {
   data: { year: string; value: number }[];
   chartType: "line" | "bar" | "pie" | "scatter";
-  width: string; // Bu parametr hozir ishlatilmaydi
+  width: string; 
   height: number;
 }
 
