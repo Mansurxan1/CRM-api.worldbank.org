@@ -1,76 +1,85 @@
-# 🌍 World Bank Data Visualizer
+🌍 World Bank Data Visualizer
+World Bank Data Visualizer — bu dastur World Bank API-dan mamlakatlar va statistik ko‘rsatkichlar bo‘yicha ma’lumotlarni olib, ularni interaktiv va chiroyli grafiklar orqali vizualizatsiya qiladi. Foydalanuvchilar mamlakat va ko‘rsatkich tanlab, 2000-2020 yillar oralig‘idagi ma’lumotlarni turli grafik turlari va kutubxonalar yordamida ko‘rishlari mumkin.
 
-**World Bank Data Visualizer** — bu dastur World Bank API-dan mamlakatlar va statistik ko‘rsatkichlar bo‘yicha ma’lumotlarni olib, ularni interaktiv va chiroyli grafiklar orqali vizualizatsiya qiladi. 
+⚙️ Texnologiyalar
 
-Foydalanuvchilar mamlakat va ko‘rsatkich tanlab, 2000-2020 yillar oralig‘idagi ma’lumotlarni quyidagi grafik kutubxonalar yordamida ko‘rishlari mumkin:
+React & TypeScript – frontend tuzilmasi uchun
+Redux Toolkit Query – API so‘rovlarini boshqarish
+D3.js – moslashuvchan va dinamik vizualizatsiyalar
+Recharts – oddiy va moslashuvchan chiziqli grafiklar
+Chart.js & react-chartjs-2 – interaktiv va foydalanuvchi uchun qulay grafiklar
+ECharts – kuchli va murakkab vizualizatsiyalar
+Nivo – zamonaviy, reaktiv va ma’lumotga yo‘naltirilgan grafiklar
+Tailwind CSS – zamonaviy, stil va UI dizayn uchun
+Inter Font – chiroyli va zamonaviy matn dizayni
 
-- Recharts
-- Chart.js
-- ECharts
-- Nivo
 
----
+🔍 Xususiyatlar
 
-## ⚙️ Texnologiyalar
+Mamlakat tanlash – dunyo mamlakatlarini ro‘yxatdan tanlash imkoniyati
+Ko‘rsatkich tanlash – masalan, GDP, aholisi, iqtisodiy o‘sish va boshqa ko‘rsatkichlar
+Turli grafik turlari:
+Chiziqli grafiklar (Line Charts)
+Ustunli grafiklar (Bar Charts)
+Doira grafiklar (Pie Charts)
+Nuqtali grafiklar (Scatter Charts)
 
-- **React & TypeScript** – frontend tuzilmasi uchun
-- **Redux Toolkit Query** – API so‘rovlarini boshqarish
-- **Recharts** – oddiy va moslashuvchan chiziqli grafiklar
-- **Chart.js** va `react-chartjs-2` – interaktiv grafiklar
-- **ECharts** – kuchli va murakkab vizualizatsiyalar
-- **Nivo** – zamonaviy, reaktiv grafik kutubxonasi
-- **Tailwind CSS** – zamonaviy, stil va UI dizayn uchun
 
----
+Bir nechta grafik kutubxonalar – D3.js, Recharts, Chart.js, ECharts va Nivo yordamida vizualizatsiya
+Tablar orqali grafiklar o‘rtasida almashish – har bir kutubxona va grafik turi uchun alohida tablar
+Chiroyli UI dizayn – gradientlar, silliq chiziqlar, Inter font va moslashuvchan dizayn
+Responsiv dizayn – grafiklar ekranning 80% kengligini (80vw) egallaydi va barcha qurilmalarda yaxshi ko‘rinadi
 
-## 🔍 Xususiyatlar
 
-- **Mamlakat tanlash** – istalgan mamlakatni ro‘yxatdan tanlash
-- **Ko‘rsatkich tanlash** – masalan, GDP, aholisi va boshqa ko‘rsatkichlar
-- **Bir nechta grafik kutubxonalar orqali vizualizatsiya**
-- **Tablar orqali grafiklar o‘rtasida almashish**
-- **Chiroyli UI dizayn** – gradientlar, Inter font, silliq chiziqlar
-
----
-
-## 🚀 O‘rnatish
-
-```
+🚀 O‘rnatish
 # Repozitoriyani klonlash
 git clone https://github.com/Mansurxan1/CRM-api.worldbank.org.git
 cd CRM-api.worldbank.org
 
 # Bog‘liqliklarni o‘rnatish
 npm install
-Yoki aniq bog‘liqliklarni o‘rnatish:
 
-npm install @reduxjs/toolkit react-redux recharts chart.js react-chartjs-2 echarts @nivo/core @nivo/line
-Ishga tushirish:
+# Aniqlik kiritilgan bog‘liqliklarni o‘rnatish
+npm install @reduxjs/toolkit react-redux d3 recharts chart.js react-chartjs-2 echarts @nivo/core @nivo/line @nivo/bar @nivo/pie @nivo/scatterplot
+
+# Ishga tushirish
 npm run dev
+
 Brauzerda oching: http://localhost:5173
 
 🧪 Loyihani ishlatish
-Mamlakat tanlang: Masalan, Uzbekistan
 
-Ko‘rsatkich tanlang: Masalan, GDP (current US$)
+Mamlakat tanlang: Masalan, Uzbekistan yoki boshqa mamlakat
+Ko‘rsatkich tanlang: Masalan, GDP (current US$), aholisi yoki boshqa ko‘rsatkich
+Grafikni ko‘ring: Tanlangan ma’lumotlar chiziqli, ustunli, doira yoki nuqtali grafik sifatida beshta kutubxona (D3.js, Recharts, Chart.js, ECharts, Nivo) orqali chiqadi
+Tablar orqali grafikni almashtiring: Har bir kutubxona yoki grafik turi uchun alohida tabdan foydalaning
 
-Grafikni ko‘ring: Tanlangan ma’lumotlar to‘rtta kutubxona grafiklarida chiqadi
-
-Tablar orqali grafikni almashtiring
 
 🌐 API haqida
-Manba: World Bank API
 
-Ko‘rsatkichlar oraliq: 2000 - 2020 yillar
+Manba: World Bank API
+Ma’lumotlar oralig‘i: 2000–2020 yillar
+Ko‘rsatkichlar: GDP, aholisi, iqtisodiy o‘sish, eksport/import va boshqalar
+
 
 📘 Eslatmalar
-Barcha komponentlar TypeScript yordamida yozilgan
 
-Kutilmagan xatoliklardan himoya mavjud
+Barcha komponentlar TypeScript yordamida yozilgan va xavfsiz kodlash amaliyotlari qo‘llanilgan
+Kutilmagan xatoliklardan himoya: API so‘rovlaridagi xatolar va noto‘g‘ri ma’lumotlar uchun ishonchli xato boshqaruvi
+Grafiklar dizayni: Grafiklar ekranning 80% kengligini (80vw) egallaydi va responsiv tarzda ishlaydi
+Foydalanuvchi tajribasi: Silliq animatsiyalar, intuitiv interfeys va zamonaviy dizayn
 
-Grafiklar ekranning 80% kengligini (80vw) egallaydi
 
 📄 Litsenziya
-Ushbu loyiha ochiq manbali bo‘lib, istalgan foydalanuvchi foydalanishi mumkin.
+Ushbu loyiha ochiq manbali bo‘lib, MIT litsenziyasi ostida tarqatiladi. Har qanday foydalanuvchi loyihadan foydalanishi, o‘zgartirishi va tarqatishi mumkin.
 
-👨‍💻 Muallif: Mansurxon
+👨‍💻 Muallif: Mansurxan1
+
+📊 Namuna Grafiklar
+
+Chiziqli grafik: Vaqt o‘tishi bilan GDP o‘sishini ko‘rsatadi
+Ustunli grafik: Turli mamlakatlarning aholisini solishtirish
+Doira grafik: Iqtisodiy ko‘rsatkichlarning ulushini ko‘rsatish
+Nuqtali grafik: GDP va aholisi o‘rtasidagi bog‘liqlikni vizualizatsiya qilish
+
+Ushbu loyiha World Bank ma’lumotlarini tahlil qilish va vizualizatsiya qilish uchun kuchli vosita bo‘lib, foydalanuvchilarga ma’lumotlarni tushunarli va jozibali tarzda taqdim etadi!
